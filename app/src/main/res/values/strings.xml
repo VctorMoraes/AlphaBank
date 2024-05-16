@@ -15,7 +15,7 @@
     <string name="request_loan">Solicitar empréstimo</string>
     <string name="loan_denied_message">Infelizmente sua solicitação de empréstimo foi negada.</string>
     <string name="loan_approved_message">Sua solicitação de empréstimo foi aprovada!</string>
-    <string name="approved_value">Valor aprovado: %s</string>
+    <string name="approved_value">Valor aprovado\n%s</string>
 
 
 </resources>
