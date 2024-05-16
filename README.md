@@ -18,22 +18,24 @@ Para executar o aplicativo basta instalar a APK que estou enviando em um disposi
 * Retrofit e OkHttp para o consumo de APIs.
 * Room como banco de dados local.
 
-## [API](https://github.com/VctorMoraes/AplhaBankApi)
+## [API](https://github.com/VctorMoraes/AlphaBankApi)
 
-As requisições são feitas para uma API própria: https://github.com/VctorMoraes/AplhaBankApi
+As requisições são feitas para uma API própria: https://github.com/VctorMoraes/AlphaBankApi
 
 A API funciona de forma local, então é possível acessar a API quando a aplicação é executada em um emulador que está na mesma rede local que a API.
 
-Caso não seja possível acessar a API, a aplicação Android retornará a seguinte resposta mockada:
-`{
-"status": "DENIED"
-}`
+Caso não seja possível acessar a API, a aplicação Android receberá a seguinte resposta mockada:
+```
+{
+  "status": "DENIED"
+}
+```
 
 ### API Doc:
 
 | Method   | URL       | Descrição                           |
 | :---------- | :--------- | :---------------------------------- |
-| `POST` | `/` | Salva usuário no banco de dados e retorna o resultado da solicitação de empréstimo |
+| `POST` | `/` | **Solicitação de empréstimo:** Salva usuário no banco de dados e retorna, de acordo com o `month_income`, o resultado da solicitação de emoréstimo   |
 
 #### Example body
 
