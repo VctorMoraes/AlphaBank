@@ -77,6 +77,9 @@ Para verificar a cobertura de teste:
   ./gradlew koverHtmlReportDebug
 ```
 
+![image](https://github.com/VctorMoraes/AlphaBank/assets/37370587/915aef59-61fb-487d-880d-319a432ac494)
+
+
 ## Next Steps
 * Aumentar a cobertura de testes unitários
 * Criar testes instrumentados para verificação da lógica de erros
