@@ -76,3 +76,9 @@ Para verificar a cobertura de teste:
 ```bash
   ./gradlew koverHtmlReportDebug
 ```
+
+## Next Steps
+* Aumentar a cobertura de testes unitários
+* Criar testes instrumentados para verificação da lógica de erros
+* Animar ícones nas telas de LoanApproved e LoanDenied
+* Fazer com que o Room seja o single source of truth para a aplicação
