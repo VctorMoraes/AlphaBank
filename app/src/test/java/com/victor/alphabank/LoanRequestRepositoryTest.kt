@@ -25,7 +25,6 @@ import org.junit.runners.JUnit4
 import retrofit2.Retrofit
 import java.net.HttpURLConnection
 
-
 @RunWith(JUnit4::class)
 class LoanRequestRepositoryTest {
 

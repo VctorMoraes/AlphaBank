@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Theme.AlphaBank.SplashScreen" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#FFD0BCFF</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/news_avd_v02</item>
+        <item name="windowSplashScreenBackground">#516B9FB3</item>
         <item name="postSplashScreenTheme">@style/Theme.AlphaBank</item>
     </style>
 

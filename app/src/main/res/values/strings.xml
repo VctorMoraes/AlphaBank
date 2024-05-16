@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">AlphaBank</string>
+    <string name="error">Error</string>
+
+    <string name="name">Nome</string>
+    <string name="age">Idade</string>
+    <string name="month_income">Renda Mensal</string>
+    <string name="city">Cidade</string>
+
+    <string name="name_field_error_message">Nome deve ter mais de 8 caracteres</string>
+    <string name="age_field_error_message">Você deve ter entre 18 e 65 anos</string>
+    <string name="month_income_field_error_message">Renda mensal deve ser superior a R$0,00</string>
+    <string name="city_field_error_message">Cidade não pode ficar vazia</string>
+
+    <string name="request_loan">Solicitar empréstimo</string>
+    <string name="loan_denied_message">Infelizmente sua solicitação de empréstimo foi negada.</string>
+    <string name="loan_approved_message">Sua solicitação de empréstimo foi aprovada!</string>
+    <string name="approved_value">Valor aprovado: %s</string>
+
+
 </resources>

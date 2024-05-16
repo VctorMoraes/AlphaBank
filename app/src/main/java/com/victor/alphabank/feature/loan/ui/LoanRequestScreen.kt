@@ -1,6 +1,7 @@
 package com.victor.alphabank.feature.loan.ui
 
 import android.widget.Toast
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -8,12 +9,12 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Warning
 import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -33,14 +34,18 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.PointerInputChange
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.victor.alphabank.R
 import com.victor.alphabank.feature.loan.uiState.LoanRequestResultUiState
 import com.victor.alphabank.feature.loan.viewmodel.LoanRequestViewModel
 
@@ -81,7 +86,7 @@ fun LoanRequestScreen(
 
             LoanRequestResultUiState.Error -> {
                 val context = LocalContext.current
-                Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, stringResource(R.string.error), Toast.LENGTH_SHORT).show()
             }
 
             LoanRequestResultUiState.Loading -> {
@@ -104,47 +109,47 @@ fun LoanRequestForm(
     var showAllErrors by rememberSaveable { mutableStateOf(false) }
 
     LoanRequestTextField(
-        label = "Nome",
+        label = stringResource(R.string.name),
         value = viewModel.userInput.name,
         onValueChange = {
             viewModel.updateName(it)
         },
         keyboardType = KeyboardType.Text,
         isError = showAllErrors && !viewModel.inputValidation.isNameValid,
-        errorMessage = "Nome deve ter mais de 8 caracteres"
+        errorMessage = stringResource(R.string.name_field_error_message)
     )
 
     LoanRequestTextField(
-        label = "Idade",
+        label = stringResource(R.string.age),
         value = viewModel.userInput.age,
         onValueChange = {
             viewModel.updateAge(it)
         },
         keyboardType = KeyboardType.NumberPassword,
         isError = showAllErrors && !viewModel.inputValidation.isAgeValid,
-        errorMessage = "Você deve ter entre 18 e 65 anos"
+        errorMessage = stringResource(R.string.age_field_error_message)
     )
 
     LoanRequestTextField(
-        label = "Renda Mensal",
+        label = stringResource(R.string.month_income),
         value = viewModel.userInput.monthIncome,
         onValueChange = {
             viewModel.updateMonthIncome(it)
         },
         keyboardType = KeyboardType.Decimal,
         isError = showAllErrors && !viewModel.inputValidation.isMonthIncomeValid,
-        errorMessage = "Renda mensal deve ser superior a R$0,00"
+        errorMessage = stringResource(R.string.month_income_field_error_message)
     )
 
     LoanRequestTextField(
-        label = "Cidade",
+        label = stringResource(R.string.city),
         value = viewModel.userInput.city,
         onValueChange = {
             viewModel.updateCity(it)
         },
         keyboardType = KeyboardType.Text,
         isError = showAllErrors && !viewModel.inputValidation.isCityValid,
-        errorMessage = "Cidade não pode ficar vazia"
+        errorMessage = stringResource(R.string.city_field_error_message)
     )
 
     Button(
@@ -178,7 +183,7 @@ fun LoanRequestForm(
             )
         } else {
             Text(
-                text = "Solicitar empréstimo",
+                text = stringResource(R.string.request_loan),
                 style = TextStyle(
                     fontSize = 18.sp
                 )
@@ -220,7 +225,7 @@ fun LoanRequestTextField(
         },
         trailingIcon = {
             if (isError) {
-                Icon(Icons.Rounded.Warning, "error", tint = MaterialTheme.colorScheme.error)
+                Icon(Icons.Rounded.Warning, stringResource(R.string.error), tint = MaterialTheme.colorScheme.error)
             }
         },
         keyboardOptions = KeyboardOptions(

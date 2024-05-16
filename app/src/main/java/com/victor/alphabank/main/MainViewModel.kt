@@ -19,16 +19,12 @@ class MainViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val _uiState: MutableStateFlow<MainUiState> =
-        MutableStateFlow(MainUiState.Loading)
+        MutableStateFlow(MainUiState.Empty)
     val uiState: StateFlow<MainUiState>
         get() = _uiState.asStateFlow()
 
     fun getLocalLoanResult() {
         viewModelScope.launch {
-            _uiState.update {
-                MainUiState.Loading
-            }
-
             getLocalLoanResultUseCase().collectLatest { loanResult ->
                 _uiState.update {
                     MainUiState.LoanResultSuccess(

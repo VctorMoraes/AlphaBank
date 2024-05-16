@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
 
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         viewModel.getLocalLoanResult()
 
         setContent {
@@ -57,11 +58,7 @@ class MainActivity : ComponentActivity() {
                             }
                         }
 
-                        MainUiState.Empty,
-                        MainUiState.Error -> {
-
-                        }
-                        MainUiState.Loading -> {
+                        MainUiState.Empty -> {
 
                         }
                     }

@@ -9,9 +9,5 @@ sealed interface MainUiState {
         val maxAmount: Float? = null,
     ) : MainUiState
 
-    data object Error: MainUiState
-
-    data object Loading: MainUiState
-
     data object Empty: MainUiState
 }
