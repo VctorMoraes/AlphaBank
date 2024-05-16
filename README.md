@@ -64,13 +64,13 @@ OR
 ```
 
 ## Testes
-* Testes unitários com JUnit4
+* Testes unitários com JUnit4 para os principais componentes: `LoanRequestViewModel` e `LoanRequestRepository`
 * Mockk para mocks
 * OkHttp MockWebServer para testes de API
 * Kover para cobertura de testes
 
 ## Test Coverage
-Atualmente 	21,5%.
+Atualmente 	21,5%, sendo eles em sua totalidade nos componentes: `LoanRequestViewModel` e `LoanRequestRepository`, além disso, Kover infelizmente não oferece cobertura de testes instrumentados.
 
 Para verificar a cobertura de teste:
 ```bash
@@ -78,6 +78,13 @@ Para verificar a cobertura de teste:
 ```
 
 ![image](https://github.com/VctorMoraes/AlphaBank/assets/37370587/915aef59-61fb-487d-880d-319a432ac494)
+
+#### LoanRequestViewModel
+![image](https://github.com/VctorMoraes/AlphaBank/assets/37370587/de7da4c5-910f-4fde-816f-94ed83aa7a3e)
+
+#### LoanRequestRepository
+![image](https://github.com/VctorMoraes/AlphaBank/assets/37370587/3598ab45-66c5-40b0-b879-7e764c1889f9)
+
 
 
 ## Next Steps
